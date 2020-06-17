@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.StudentLecture">
+    <resultMap id="studentLectureMap" type="com.example.demo.pojo.StudentLecture">
+        <id column="id" property="id"></id>
+        <result column="lectureName" property="lectureName"></result>
+    </resultMap>
+
+    <insert id="insertLecture" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO student_lecture (lectureName) VALUES (#{lectureName})
+    </insert>
+</mapper>

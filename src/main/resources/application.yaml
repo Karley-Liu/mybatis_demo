@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    name: mybatis
+    url: jdbc:mysql://127.0.0.1:3306/mybatis?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+#    使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.example.demo.pojo
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    cache-enabled: false
+
